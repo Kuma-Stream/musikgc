@@ -1,0 +1,12 @@
+version: "1.0"
+
+services:
+  yukki:
+    container_name: yukki
+    image: yukki-bot
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
